@@ -36,24 +36,28 @@ describe('SideBySideRenderer', () => {
             lines: [
               {
                 content: ' context',
+                lineno: 0,
                 type: LineType.CONTEXT,
                 oldNumber: 19,
                 newNumber: 19,
               },
               {
                 content: '-removed',
+                lineno: 0,
                 type: LineType.DELETE,
                 oldNumber: 20,
                 newNumber: undefined,
               },
               {
                 content: '+added',
+                lineno: 0,
                 type: LineType.INSERT,
                 oldNumber: undefined,
                 newNumber: 20,
               },
               {
                 content: '+another added',
+                lineno: 0,
                 type: LineType.INSERT,
                 oldNumber: undefined,
                 newNumber: 21,
@@ -245,12 +249,14 @@ Object {
               lines: [
                 {
                   content: '-test',
+                  lineno: 0,
                   type: LineType.DELETE,
                   oldNumber: 1,
                   newNumber: undefined,
                 },
                 {
                   content: '+test1r',
+                  lineno: 0,
                   type: LineType.INSERT,
                   oldNumber: undefined,
                   newNumber: 1,
@@ -405,6 +411,7 @@ Object {
       const oldLines: DiffLine[] = [
         {
           content: '-test',
+          lineno: 0,
           type: LineType.DELETE,
           oldNumber: 1,
           newNumber: undefined,
@@ -414,6 +421,7 @@ Object {
       const newLines: DiffLine[] = [
         {
           content: '+test1r',
+          lineno: 0,
           type: LineType.INSERT,
           oldNumber: undefined,
           newNumber: 1,

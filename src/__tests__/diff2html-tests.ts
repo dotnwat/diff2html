@@ -17,12 +17,14 @@ const jsonExample1: DiffFile[] = [
         lines: [
           {
             content: '-test',
+            lineno: 5,
             type: LineType.DELETE,
             oldNumber: 1,
             newNumber: undefined,
           },
           {
             content: '+test1',
+            lineno: 6,
             type: LineType.INSERT,
             oldNumber: undefined,
             newNumber: 1,
@@ -68,12 +70,14 @@ describe('Diff2Html', () => {
                 "lines": Array [
                   Object {
                     "content": "-test",
+                    "lineno": 5,
                     "newNumber": undefined,
                     "oldNumber": 1,
                     "type": "delete",
                   },
                   Object {
                     "content": "+test1",
+                    "lineno": 6,
                     "newNumber": 1,
                     "oldNumber": undefined,
                     "type": "insert",
@@ -126,54 +130,63 @@ describe('Diff2Html', () => {
                 "lines": Array [
                   Object {
                     "content": " object ResponseErrorCode extends JsonEnumeration {",
+                    "lineno": 5,
                     "newNumber": 50,
                     "oldNumber": 50,
                     "type": "context",
                   },
                   Object {
                     "content": "  val NoError, ServiceError, JsonError,",
+                    "lineno": 6,
                     "newNumber": 51,
                     "oldNumber": 51,
                     "type": "context",
                   },
                   Object {
                     "content": "  InvalidPermissions, MissingPermissions, GenericError,",
+                    "lineno": 7,
                     "newNumber": 52,
                     "oldNumber": 52,
                     "type": "context",
                   },
                   Object {
                     "content": "-  TokenRevoked, MissingToken = Value",
+                    "lineno": 8,
                     "newNumber": undefined,
                     "oldNumber": 53,
                     "type": "delete",
                   },
                   Object {
                     "content": "-}",
+                    "lineno": 9,
                     "newNumber": undefined,
                     "oldNumber": 54,
                     "type": "delete",
                   },
                   Object {
                     "content": "+  TokenRevoked, MissingToken,",
+                    "lineno": 11,
                     "newNumber": 53,
                     "oldNumber": undefined,
                     "type": "insert",
                   },
                   Object {
                     "content": "+  IndexLock, RepositoryError, NotValidRepo, PullRequestNotMergeable, BranchError,",
+                    "lineno": 12,
                     "newNumber": 54,
                     "oldNumber": undefined,
                     "type": "insert",
                   },
                   Object {
                     "content": "+  PluginError, CodeParserError, EngineError = Value",
+                    "lineno": 13,
                     "newNumber": 55,
                     "oldNumber": undefined,
                     "type": "insert",
                   },
                   Object {
                     "content": "+}",
+                    "lineno": 14,
                     "newNumber": 56,
                     "oldNumber": undefined,
                     "type": "insert",

@@ -348,12 +348,14 @@ describe('LineByLineRenderer', () => {
               lines: [
                 {
                   content: '-test',
+                  lineno: 0,
                   type: LineType.DELETE,
                   oldNumber: 1,
                   newNumber: undefined,
                 },
                 {
                   content: '+test1r',
+                  lineno: 0,
                   type: LineType.INSERT,
                   oldNumber: undefined,
                   newNumber: 1,
@@ -493,24 +495,28 @@ describe('LineByLineRenderer', () => {
             lines: [
               {
                 content: ' one context line',
+                lineno: 0,
                 type: LineType.CONTEXT,
                 oldNumber: 1,
                 newNumber: 1,
               },
               {
                 content: '-test',
+                lineno: 0,
                 type: LineType.DELETE,
                 oldNumber: 2,
                 newNumber: undefined,
               },
               {
                 content: '+test1r',
+                lineno: 0,
                 type: LineType.INSERT,
                 oldNumber: undefined,
                 newNumber: 2,
               },
               {
                 content: '+test2r',
+                lineno: 0,
                 type: LineType.INSERT,
                 oldNumber: undefined,
                 newNumber: 3,
